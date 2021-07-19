@@ -1,2 +1,14 @@
-@import "variables_overrides";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// ORDRE D'IMPORT :
+// 1 - Utils (variables, fonctions, mixins, %placeholders, keyframes...) ;
+// 2 - Vendors (feuilles de style de tiers - Si existantes) ;
+// 3 - Base (police, box-sizing...) ;
+// 4 - Components (blocs BEM indépendants) ;
+// 5 - Layout (blocs BEM comprenant ce qui est réutilisable tq header/footer/formulaires...) ;
+// 6 - Pages (blocs qui ne s'appliquent qu'à une seule page et qui ne seront pas réutilisés ailleurs) ;
+// 7 - Themes (code thématique, pour Noël ou pour l'été par exemple).
+
+// 1 - Utils
+@import "./utils/variables_overrides";
+
+// 2 - Vendors
+@import "../../../backend/node_modules/bootstrap/scss/bootstrap.scss";
