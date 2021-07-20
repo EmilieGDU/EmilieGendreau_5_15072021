@@ -8,21 +8,52 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="./images/orinoco_favicon_16x16.ico" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="./style/css/style.css" />
+    <!-- JavaScript -->
+    <script src="script.js" async></script>
     <title>Oriteddy - Product</title>
 </head>
 
 
 <body>
-    <header class="container-fluid">        
+    <header class="container-fluid">   
+        <div class="row">
+            <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
+            <!-- Navbar -->
+            <nav class="col navbar navbar-expand-sm bg-dark navbar-dark"> 
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/orinoco_logo_resized.png" alt="Logo de l'entreprise Orinoco" />
+                </a>
+                <!-- Navigation toggle button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="basket.html">Panier</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
+        </div>     
     </header>
 
     <main class="container">
+        <div class="row">
+            <!-- Teddy card -->
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                [Teddy card content]
+            </div> 
+        </div>
     </main>
 
-    <footer class="container-fluid">
-        <p>&copy; 2021 Orinoco</p>
-        <ul>
+    <footer class="container-fluid bg-dark">
+        <p class="text-white-50">&copy; 2021 Orinoco</p> <!-- class="row" ?-->
+        <ul class="text-white-50"> <!-- class="row" ?-->
             <li><a>Plan du site</a></li>
             <li> | </li>
             <li><a>Mentions légales</a></li>

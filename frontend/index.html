@@ -9,6 +9,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="./images/orinoco_favicon_16x16.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./style/css/style.css" />
+    <!-- JavaScript -->
+    <script async src="script.js"></script>
     <title>Oriteddy - Homepage</title>
 </head>
 
@@ -16,47 +18,68 @@
 <body>
     <header class="container-fluid">   
         <div class="row">
-            <div class="col"></div> <!-- Logo -->
-            <div class="col"></div> <!-- Barre de navigation -->
+            <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
+            <!-- Navbar -->
+            <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/orinoco_logo_resized.png" alt="Logo de l'entreprise Orinoco" />
+                </a>
+                <!-- Navigation toggle button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="basket.html">Panier</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
         </div>     
     </header>
 
 
     <main class="container">
-        <div class="jumbotron">
-            <h1>Bienvenue sur Oriteddy !</h1>
-            <p>Notre boutique en ligne, Oriteddy, vous propose une sélection d'ours en peluche conforme aux normes de sécurité européennes. <br/>
-            Traditionnels ou amusants, nos nounours sont indémodables et sauront combler petits et grands enfants. <br/>
-            Magnifiques objets de décoration, ils agrémenteront votre intérieur à merveille.</p>
-        </div>
-        
-        <div class=container>
-            <h2>Teddies</h2> <!-- class="row" ?-->
-            <div class="row">
-                <!-- Teddy card -->
-                <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                    [Teddy card content]
-                </div> 
-                <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                    [Teddy card content]
-                </div> 
-                <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                    [Teddy card content]
-                </div> 
+        <div class="row">
+            <div class="col jumbotron bg-light">
+                <h1 class="text-center">Bienvenue sur Oriteddy !</h1>
+                <p>Notre boutique en ligne, Oriteddy, vous propose une sélection d'ours en peluche conforme aux normes de sécurité européennes. <br/>
+                Traditionnels ou amusants, nos nounours sont indémodables et sauront combler petits et grands enfants. <br/>
+                Magnifiques objets de décoration, ils agrémenteront votre intérieur à merveille.</p>
             </div>
+        </div>
+            
+        <div class="row">
+            <h2 class="col-12 text-center">Teddies</h2>
+            <!-- Teddies cards -->
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                [Teddy card content]
+            </div> 
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                [Teddy card content]
+            </div> 
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                [Teddy card content]
+            </div> 
         </div>
     </main>
 
 
-    <footer class="container-fluid">
-        <p>&copy; 2021 Orinoco</p> <!-- class="row" ?-->
-        <ul> <!-- class="row" ?-->
-            <li><a>Plan du site</a></li>
-            <li> | </li>
-            <li><a>Mentions légales</a></li>
-            <li> | </li>
-            <li><a>CGV</a></li>
-        </ul>
+    <footer class="container-fluid bg-logo">
+        <div class="row">
+            <p class="col-12 text-dark text-center">&copy; 2021 Orinoco</p> <!-- class="row" ?-->
+            <ul class="col-12 text-dark text-center"> <!-- class="row" ?-->
+                <li><a>Plan du site</a></li>
+                <li> | </li>
+                <li><a>Mentions légales</a></li>
+                <li> | </li>
+                <li><a>CGV</a></li>
+            </ul>
+        </div>
     </footer>
 
     <!-- Optional JavaScript : for the proper functioning of Bootstrap and its librairies -->
