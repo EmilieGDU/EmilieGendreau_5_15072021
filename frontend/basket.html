@@ -46,23 +46,83 @@
         <div class="row">
             <h1 class="col">Votre panier</h1>
         </div>
+
         <div class="row">
             <!-- Teddy card -->
             <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
                 [Some content]
                 <p>Image de l'ours commandé</p>
-                <p class="text-success">Ajouté au panier</p>
-                <p>Sous-total du panier</p>
+                <p class="fw-bold">Sous-total du panier</p>
             </div> 
         </div>
+
         <div class="row">
-            <p class="col">
-                <a class="btn btn-warning text-center" href="order.html" role="button">Passer la commande</a>
-            </p>
+            <div class="col">
+                <button type=button class="btn btn-warning text-center">Passer la commande</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2>Vos coordonnées</h2>
+                <form method="post" action="#">
+                    <div class="form-group row mb-3">
+                        <label for="civility" class="col-sm-2 col-form-label">Civilité</label>
+                        <div class="col-sm-10">
+                            <select id="civility" class="form-select" name="civility">
+                                <option value="madam">Madame</option>
+                                <option value="miss">Mademoiselle</option>
+                                <option value="mister" selected>Monsieur</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="firstName" class="col-sm-2 col-form-label">Prénom</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="firstName" class="form-control" name="firstName" placeholder="Pierre" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="lastName" class="col-sm-2 col-form-label">Nom</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="lastName" class="form-control" name="lastName" placeholder="DUPONT" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="address" class="col-sm-2 col-form-label">Adresse</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="address" class="form-control" name="address" placeholder="15 impasse des Lilas" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="city" class="col-sm-2 col-form-label">Ville</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="city" class="form-control" name="city" placeholder="PARIS" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="email" class="col-sm-2 col-form-label">E-mail</label>
+                        <div class="col-sm-10">
+                            <input type="email" id="email" class="form-control" name="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-warning text-center">Valider la commande</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 
-    <footer class="container-fluid bg-logo">
+    <footer class="container-fluid bg-logo mt-5">
         <div class="row">
             <p class="col-12 text-dark text-center">&copy; 2021 Orinoco</p>
             <ul class="col-12 text-dark text-center list-unstyled list-inline"> 

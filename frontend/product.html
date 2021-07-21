@@ -44,25 +44,61 @@
 
     <main class="container">
         <div class="row">
-            <h1 class="col-12 text-center">Personnalisation du produit</h1>
+            <h1 class="col-12 text-center mt-5 mb-3">Personnalisation du produit</h1>
             <!-- Teddy card -->
-            <div class="card col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+            <div class="card col-12 col-md-6 mx-auto mt-3 mb-3"> <!-- Responsive -->
                 <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="Teddy bear" />
-                <div class="card-body text-center">
+                <div class="card-body">
                     [Teddy card content]
                     <h2 class="card-title">Nom du nounours</h2>
                     <p class="card-text">Prix du nounours</p>
-                    <form> 
-                        <p>Options de personnalisation (menu déroulant)</p>
-                        <p>Quantité (menu déroulant)</p>
+                    <form method="post" action="#">
+                        <div class="form-group row mb-3">
+                            <label for="colorSelect" class="col-sm-8 col-form-label">Choisissez la couleur de votre ourson : </label>
+                            <div class="col-sm-4">
+                                <select id="colorSelect" class="form-select" name="color">
+                                    <option value="color1" selected>Color 1</option>
+                                    <option value="color2">Color 2</option>
+                                    <option value="color3">Color 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label for="quantity" class="col-sm-8 col-form-label">Quantité : </label>
+                            <div class="col-sm-4">
+                                <select id="quantity" class="form-select" name="quantity">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10+">10+</option>
+                                </select>
+                            </div>
+                        </div>
                     </form>
-                    <a class="btn btn-warning text-center" href="basket.html" role="button">Ajouter au panier</a>
+                    
+                    <a class="btn btn-warning text-center d-block col-6 mx-auto mt-5" href="basket.html" role="button">Ajouter au panier</a>
                 </div>
             </div> 
         </div>
+
+        <!-- Alert message : can be hidden by the user-->
+        <div class="row">
+            <div class="alert alert-success alert-dismissible fade show col-12 col-md-6 mx-auto mt-3 mb-3" role="alert">
+                <p class="fw-bold">Article ajouté au panier</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+        </div>
     </main>
 
-    <footer class="container-fluid bg-logo">
+    <footer class="container-fluid bg-logo mt-5">
         <div class="row">
             <p class="col-12 text-dark text-center">&copy; 2021 Orinoco</p>
             <ul class="col-12 text-dark text-center list-unstyled list-inline"> 
