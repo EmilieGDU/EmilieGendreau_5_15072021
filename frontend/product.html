@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./images/orinoco_favicon_16x16.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/orinoco_favicon_removebg.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./style/css/style.css" />
     <!-- JavaScript -->
@@ -20,21 +20,21 @@
         <div class="row">
             <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
             <!-- Navbar -->
-            <nav class="col navbar navbar-expand-sm bg-dark navbar-dark"> 
+            <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
                 <a class="navbar-brand" href="index.html">
                     <img src="images/orinoco_logo_resized.png" alt="Logo de l'entreprise Orinoco" />
                 </a>
                 <!-- Navigation toggle button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
+                            <a class="nav-link text-dark" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="basket.html">Panier</a>
+                            <a class="nav-link text-dark" href="basket.html">Panier</a>
                         </li>
                     </ul>
                 </div>
@@ -44,15 +44,19 @@
 
     <main class="container">
         <div class="row">
-            <h1 class="col-12 text-center">Descriptif du produit</h1>
+            <h1 class="col-12 text-center">Personnalisation du produit</h1>
             <!-- Teddy card -->
             <div class="card col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="" />
+                <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="Teddy bear" />
                 <div class="card-body text-center">
                     [Teddy card content]
                     <h2 class="card-title">Nom du nounours</h2>
-                    <p class="card-text">Descriptif du nounours</p>
                     <p class="card-text">Prix du nounours</p>
+                    <form> 
+                        <p>Options de personnalisation (menu déroulant)</p>
+                        <p>Quantité (menu déroulant)</p>
+                    </form>
+                    <a class="btn btn-warning text-center" href="basket.html" role="button">Ajouter au panier</a>
                 </div>
             </div> 
         </div>

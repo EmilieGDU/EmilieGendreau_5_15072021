@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./images/orinoco_favicon_16x16.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/orinoco_favicon_removebg.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./style/css/style.css" />
     <!-- JavaScript -->
@@ -20,21 +20,21 @@
         <div class="row">
             <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
             <!-- Navbar -->
-            <nav class="col navbar navbar-expand-sm bg-dark navbar-dark"> 
+            <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
                 <a class="navbar-brand" href="index.html">
                     <img src="images/orinoco_logo_resized.png" alt="Logo de l'entreprise Orinoco" />
                 </a>
                 <!-- Navigation toggle button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
+                            <a class="nav-link text-dark" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="basket.html">Panier</a>
+                            <a class="nav-link text-dark" href="basket.html">Panier</a>
                         </li>
                     </ul>
                 </div>
@@ -43,6 +43,24 @@
     </header>
 
     <main class="container">
+        <div class="row">
+            <p class="col-12 bg-success text-center">Commande validée</p>
+        </div>
+        
+        <div class="row">
+            <!-- GENERATION DYNAMIQUE -->
+            <p class="col-12 text-center">
+                <span id="civility">#Madame/Mademoiselle/Monsieur#</span> <span id="first_name">#Prénom#</span> <span id="last_name">#NOM#</span>, <br/>
+                Votre commande numéro <span id="order_id">#Numéro de commande#</span> est confirmée, pour un montant total de <span id="total_amount">#X,XX €#</span>. <br/>
+                Dans quelques minutes, vous recevrez un récapitulatif à l'adresse courriel suivante : <span id="email">#Adresse @#</span>. <br/>
+                Toute l'équipe d'Orinoco vous remercie pour votre achat. <br/>
+                A très bientôt sur l'une de nos boutiques en ligne !
+            </p>
+        </div>
+
+        <div class="row">
+            <a class="btn btn-secondary text-center col-10 col-sm-8 col-md-4" href="index.html" role="button">Retour à l'accueil</a>
+        </div>
     </main>
 
     <footer class="container-fluid bg-logo">
