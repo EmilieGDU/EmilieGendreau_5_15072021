@@ -16,16 +16,15 @@
 
 
 <body>
-    <header class="container-fluid">   
-        <div class="row">
-            <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
-            <!-- Navbar -->
-            <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
+    <header>   
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm bg-logo navbar-light"> 
+            <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/orinoco_logo_resized.png" alt="Logo de l'entreprise Orinoco" />
                 </a>
                 <!-- Navigation toggle button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarContent" class="collapse navbar-collapse">
@@ -38,62 +37,102 @@
                         </li>
                     </ul>
                 </div>
-            </nav> 
-        </div>     
+            </div>
+        </nav> 
     </header>
 
 
     <main class="container">
         <div class="row">
             <div class="col jumbotron bg-light mt-5 mb-3">
-                <h1 class="text-center">Bienvenue sur Oriteddy !</h1>
-                <p class="col-6">Notre boutique en ligne, Oriteddy, vous propose une sélection d'ours en peluche faits à la main et conformes aux normes de sécurité européennes. <br/>
+                <h1 class="text-center">Bienvenue !</h1>
+                <p class="text-center">Notre boutique en ligne Oriteddy vous propose une sélection d'ours en peluche <strong>faits à la main</strong> et <strong>conformes aux normes de sécurité européennes</strong>. <br/>
                 Traditionnels ou amusants, nos nounours sont indémodables et sauront combler petits et grands enfants. <br/>
                 Magnifiques objets de décoration, ils agrémenteront votre intérieur à merveille.</p>
             </div>
         </div>
-            
-        <div class="row">
-            <h2 class="col-12 text-center mt-3 mb-3">Teddies</h2>
-        </div>
 
+        <h2 class="text-center my-3">Nos oursons</h2>
+        
         <div class="row">
             <!-- Teddies cards -->
-            <div class="card col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                <img class="card-img-top" src="../backend/images/teddy_1.jpg" alt="Teddy bear" />
-                <div class="card-body text-center">
-                    [Teddy card content]
-                    <h3 class="card-title">Nom du nounours</h3>
-                    <p class="card-text">Prix du nounours</p>
-                    <p class="card-text">Descriptif du nounours</p>                    
-                    <a class="btn btn-warning text-center d-block col-9 mx-auto mt-3" href="product.html" role="button">Personnaliser maintenant</a>
-                </div>
-            </div> 
-            <div class="card col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="Teddy bear" />
-                <div class="card-body text-center">
-                    [Teddy card content]
-                    <h3 class="card-title">Nom du nounours</h3>
-                    <p class="card-text">Descriptif du nounours</p>
-                    <p class="card-text">Prix du nounours</p>
-                    <a class="btn btn-warning text-center d-block col-9 mx-auto mt-3" href="product.html" role="button">Personnaliser maintenant</a>
-                </div>
-            </div> 
-            <div class="card col-12 col-md-6 col-lg-4"> <!-- Responsive -->
-                <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="Teddy bear" />
-                <div class="card-body text-center">
-                    [Teddy card content]
-                    <h3 class="card-title">Nom du nounours</h3>
-                    <p class="card-text">Descriptif du nounours</p>
-                    <p class="card-text">Prix du nounours</p>
-                    <a class="btn btn-warning text-center d-block col-9 mx-auto mt-3" href="product.html" role="button">Personnaliser maintenant</a>
-                </div>
-            </div> 
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                <div class="card m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top teddyCard_portrait--img" src="../backend/images/teddy_1.jpg" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        [Teddy card content]
+                        <h3 class="card-title">Nom du nounours</h3>
+                        <p class="card-text">Prix du nounours</p>
+                        <p class="card-text">Descriptif du nounours</p>                    
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto mt-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                <div class="card m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top teddyCard_portrait--img" src="../backend/images/teddy_2.jpg" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        [Teddy card content]
+                        <h3 class="card-title">Nom du nounours</h3>
+                        <p class="card-text">Prix du nounours</p>
+                        <p class="card-text">Descriptif du nounours</p>                    
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto mt-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                <div class="card m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top teddyCard_portrait--img" src="../backend/images/teddy_3.jpg" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        [Teddy card content]
+                        <h3 class="card-title">Nom du nounours</h3>
+                        <p class="card-text">Prix du nounours</p>
+                        <p class="card-text">Descriptif du nounours</p>                    
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto mt-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                <div class="card m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top teddyCard_portrait--img" src="../backend/images/teddy_4.jpg" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        [Teddy card content]
+                        <h3 class="card-title">Nom du nounours</h3>
+                        <p class="card-text">Prix du nounours</p>
+                        <p class="card-text">Descriptif du nounours</p>                    
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto mt-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                <div class="card m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top teddyCard_portrait--img" src="../backend/images/teddy_5.jpg" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        [Teddy card content]
+                        <h3 class="card-title">Nom du nounours</h3>
+                        <p class="card-text">Prix du nounours</p>
+                        <p class="card-text">Descriptif du nounours</p>                    
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto mt-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 col-md-6 col-lg-4"> <!-- Responsive -->
+                <div class="card m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        [Teddy card content]
+                        <h3 class="card-title">Nom du nounours</h3>
+                        <p class="card-text">Prix du nounours</p>
+                        <p class="card-text">Descriptif du nounours</p>                    
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto mt-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
         </div>
     </main>
 
 
-    <footer class="container-fluid bg-logo mt-5">
+    <footer class="container-fluid bg-logo mt-5 py-2">
         <div class="row">
             <p class="col-12 text-dark text-center">&copy; 2021 Orinoco</p>
             <ul class="col-12 text-dark text-center list-unstyled list-inline"> 
@@ -109,8 +148,8 @@
     <!-- Optional JavaScript : for the proper functioning of Bootstrap and its librairies -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>    
 </body>
 
 </html>
