@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch style/scss/main.scss:style/css/style.css",
+    "sass-prod": "sass --watch style/scss/main.scss:style/css/style.css --style compressed",
+    "prefix": "postcss style/css/style.css --use autoprefixer -d style/css/prefixed/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2",
+    "bootstrap-icons": "^1.5.0",
+    "sass": "^1.36.0"
+  }
+}

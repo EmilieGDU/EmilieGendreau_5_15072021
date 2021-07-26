@@ -4,20 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "sass": "sass --watch ../frontend/style/scss/main.scss:../frontend/style/css/style.css",
-    "sass-prod": "sass --watch ../frontend/style/scss/main.scss:../frontend/style/css/style.css --style compressed",
-    "prefix": "postcss ../frontend/style/css/style.css --use autoprefixer -d ../frontend/style/css/prefixed/"
+    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.2",
-    "bootstrap-icons": "^1.5.0",
     "express": "^4.16.4",
-    "sass": "^1.35.2",
     "uuid": "^3.3.2"
   },
-  "devDependencies": {
-    "@popperjs/core": "^2.9.2"
-  }
+  "devDependencies": {}
 }
