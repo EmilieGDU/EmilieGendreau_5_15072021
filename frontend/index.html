@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col jumbotron bg-light mt-5 mb-3">
                 <h1 class="text-center">Bienvenue !</h1>
-                <p class="text-center">Notre boutique en ligne Oriteddy vous propose une sélection d'ours en peluche <strong>faits à la main</strong> et <strong>conformes aux normes de sécurité européennes</strong>. <br/>
+                <p class="text-center lh-lg">Notre boutique en ligne Oriteddy vous propose une sélection d'ours en peluche <strong>faits à la main</strong> et <strong>conformes aux normes de sécurité européennes</strong>. <br/>
                 Traditionnels ou amusants, nos nounours sont indémodables et sauront combler petits et grands enfants. <br/>
                 Magnifiques objets de décoration, ils agrémenteront votre intérieur à merveille.</p>
             </div>
@@ -67,91 +67,20 @@
         <div id="catalog" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"> <!-- Responsive -->
 
             <!-- Teddy's card model -->
-            <!-- <div id="cardModel" class="col"> 
-                    <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
-                        <img class="card-img-top" src="../backend/images/teddy_X.jpg" alt="Teddy bear" />
-                        <div class="card-body text-center">
-                            [Teddy card content]
-                            <h3 class="card-title">Nom du nounours</h3>
-                            <p class="card-text">Prix du nounours</p>
-                            <p class="card-text">Descriptif du nounours</p>
-                        </div>
-                        <div class="card-footer text-center">                
-                            <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-2 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
-                        </div>
-                    </div> 
-                 </div> -->
+            <div id="cardModel" class="col d-none"> 
+                <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
+                    <img class="card-img-top card__image" src="" alt="Teddy bear" />
+                    <div class="card-body text-center">
+                        <h3 class="card-title cardBody__title"></h3>
+                        <p class="card-text text-muted cardBody__price"></p>
+                        <p class="card-text cardBody__description"></p>
+                    </div>
+                    <div class="card-footer text-center">                
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-3 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
+                    </div>
+                </div> 
+            </div>
 
-            <div class="col"> 
-                <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
-                    <img class="card-img-top" src="../backend/images/teddy_1.jpg" alt="Teddy bear" />
-                    <div class="card-body text-center">
-                        [Teddy card content]
-                        <h3 class="card-title">Nom du nounours</h3>
-                        <p class="card-text">Prix du nounours</p>
-                        <p class="card-text">Descriptif du nounours</p>
-                    </div>
-                    <div class="card-footer text-center">                
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-2 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="col">
-                <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
-                    <img class="card-img-top" src="../backend/images/teddy_2.jpg" alt="Teddy bear" />
-                    <div class="card-body text-center">
-                        [Teddy card content]
-                        <h3 class="card-title">Nom du nounours</h3>
-                        <p class="card-text">Prix du nounours</p>
-                        <p class="card-text">Descriptif du nounours</p>
-                    </div>
-                    <div class="card-footer text-center">                
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-2 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="col">
-                <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
-                    <img class="card-img-top" src="../backend/images/teddy_3.jpg" alt="Teddy bear" />
-                    <div class="card-body text-center">
-                        [Teddy card content]
-                        <h3 class="card-title">Nom du nounours</h3>
-                        <p class="card-text">Prix du nounours</p>
-                        <p class="card-text">Descriptif du nounours</p>
-                    </div>
-                    <div class="card-footer text-center">                
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-2 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="col">
-                <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
-                    <img class="card-img-top" src="../backend/images/teddy_4.jpg" alt="Teddy bear" />
-                    <div class="card-body text-center">
-                        [Teddy card content]
-                        <h3 class="card-title">Nom du nounours</h3>
-                        <p class="card-text">Prix du nounours</p>
-                        <p class="card-text">Descriptif du nounours</p>
-                    </div>
-                    <div class="card-footer text-center">                
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-2 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="col">
-                <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
-                    <img class="card-img-top" src="../backend/images/teddy_5.jpg" alt="Teddy bear" />
-                    <div class="card-body text-center">
-                        [Teddy card content]
-                        <h3 class="card-title">Nom du nounours</h3>
-                        <p class="card-text">Prix du nounours</p>
-                        <p class="card-text">Descriptif du nounours</p>
-                    </div>
-                    <div class="card-footer text-center">                
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-2 stretched-link" href="product.html" role="button">Personnaliser maintenant</a>
-                    </div>
-                </div> 
-            </div>
         </div>
     </main>
 
