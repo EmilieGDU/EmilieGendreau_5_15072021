@@ -36,11 +36,11 @@ function generateTeddyCards(teddies) {
     teddies.forEach(teddy => {
         // Clonage de la matrice de la carte produit 
         let teddyCard = cloneCardModel("cardModel");          
-        // Assignation de valeurs aux différents attributs de la carte produit (atteignables via la propriété childNodes appliquée sur le noeud parent, et en suivant l'arborescence descendante des noeuds enfants)
-        teddyCard.childNodes[1].childNodes[1].setAttribute("src", teddy.imageUrl);
-        teddyCard.childNodes[1].childNodes[3].childNodes[1].innerText = teddy.name;
-        teddyCard.childNodes[1].childNodes[3].childNodes[3].innerText = Math.round(teddy.price/100).toFixed(2) + " €"; // Conversion du prix de centimes en Euros et arrondissement du résultat à 2 chiffres après la virgule
-        teddyCard.childNodes[1].childNodes[3].childNodes[5].innerText = teddy.description;
+        // Assignation de valeurs aux différents attributs de la carte produit
+        teddyCard.querySelector(".card__image").setAttribute("src", teddy.imageUrl);
+        teddyCard.querySelector(".cardBody__title").innerText = teddy.name;
+        teddyCard.querySelector(".cardBody__price").innerText = Math.round(teddy.price/100).toFixed(2) + " €"; // Conversion du prix de centimes en Euros et arrondissement du résultat à 2 chiffres après la virgule
+        teddyCard.querySelector(".cardBody__description").innerText = teddy.description;
         // Insertion de la carte produit au sein du DOM
         appendCard(teddyCard);
     })
