@@ -41,6 +41,8 @@ function generateTeddyCards(teddies) {
         teddyCard.querySelector(".cardBody__title").innerText = teddy.name;
         teddyCard.querySelector(".cardBody__price").innerText = Math.round(teddy.price/100).toFixed(2) + " €"; // Conversion du prix de centimes en Euros et arrondissement du résultat à 2 chiffres après la virgule
         teddyCard.querySelector(".cardBody__description").innerText = teddy.description;
+        console.log(teddy._id);
+        teddyCard.querySelector(".card__link").setAttribute("href", `product.html?id=${teddy._id}`);
         // Insertion de la carte produit au sein du DOM
         appendCard(teddyCard);
     })
