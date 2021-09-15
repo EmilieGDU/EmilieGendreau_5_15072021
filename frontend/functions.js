@@ -47,7 +47,7 @@ function generateTeddyCards(teddies) {
 
 
 // Page produit
-// Générer la carte produit individuelle à partir des données retournées par l'API(lorsqu'un objet est retourné)
+// Générer la carte produit individuelle à partir des données retournées par l'API (lorsqu'un objet est retourné)
 function generateTeddyCard(teddy){    
     // teddy est un objet contenant l'ensemble des données retournées par l'API
     // Clonage de la matrice de la carte produit 
