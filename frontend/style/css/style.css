@@ -276,6 +276,7 @@ svg {
 }
 
 table {
+  /*min-width: 550px;*/
   caption-side: bottom;
   border-collapse: collapse;
 }

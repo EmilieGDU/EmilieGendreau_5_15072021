@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Required meta tags -->
@@ -28,7 +28,6 @@
 <body>
     <header class="container-fluid">   
         <div class="row">
-            <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
             <!-- Navbar -->
             <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
                 <a class="navbar-brand" href="index.html">
@@ -43,8 +42,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="index.html">Accueil</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-dark" href="basket.html">Panier</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="basket.html">Panier <span class="badge bg-danger rounded-circle quantity">0</span></a>
                         </li>
                     </ul>
                 </div>
@@ -56,56 +55,58 @@
         <h1 class="mt-4 mb-5 text-center">Votre panier</h1>
 
         <div class="row">
-            <div class="col-12">
-                <table class="table table-striped mb-4">
+            <div class="col-12 text-center fw-bold emptyBasket">
+                <p>Aucun article n'est présent dans votre panier.</p>
+                <button type=button class="btn btn-warning text-center btn__catalog">Consulter le catalogue</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped mb-4 basketArray d-none">
                     <thead>
                         <tr>
                             <th scope="col">Article</th>                            
-                            <th scope="col">Prix unitaire</th>
-                            <th scope="col">Quantité</th>
-                            <th scope="col">Prix total</th>
+                            <th scope="col" class="ps-5">Prix unitaire</th>
+                            <th scope="col" class="ps-5">Quantité</th>
+                            <th scope="col" class="ps-5">Prix total</th>
+                            <th scope="col" class="ps-5"></th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Dynamically generated table body-->
+                        <!-- 
                         <tr>
-                            <th scope="row"><img class="pe-5" src="" alt="[MINI_PICTURE]"/> Mini photo + nom ourson</th>
+                            <th scope="row"><img class="pe-5" src="" alt=""/></th>
                             <td>Prix</td>
                             <td>Quantité</td>
                             <td>Total</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><img class="pe-5" src="" alt="[MINI_PICTURE]"/> Mini photo + nom ourson</th>
-                            <td>Prix</td>
-                            <td>Quantité</td>
-                            <td>Total</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><img class="pe-5" src="" alt="[MINI_PICTURE]"/> Mini photo + nom ourson</th>
-                            <td>Prix</td>
-                            <td>Quantité</td>
-                            <td>Total</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Sous-total du panier (X articles ?)</th>
                             <td></td>
-                            <td></td>
-                            <td class="fw-bold">Sous-total du panier</td>
-                        </tr>
+                        </tr> 
+                        -->
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Sous-total du panier</th>
+                            <td></td>
+                            <td></td>
+                            <td class="fw-bold ps-5 basket__amount" colspan="2"><span class="totalAmount"></span></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div> 
         </div>
 
-        <div class="row">
-            <div class="col">
-                <button type=button class="btn btn-warning text-center">Passer la commande</button>
-            </div>
+        <div class="row">            
+            <div class="col d-flex justify-content-between basket__buttons d-none">
+                <button type=button class="btn btn-warning text-center btn__continue">Poursuivre les achats</button>
+                <button type=button class="btn btn-warning text-center btn__order">Passer la commande</button>
+            </div>         
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col basket__form d-none">
                 <h2 class="mt-5 mb-4">Vos coordonnées</h2>
-                <form method="post" action="#">
+                
+                <form id="contact-form" method="post" action="#">
                     <div class="form-group row mb-3">
                         <label for="civility" class="col-2 col-form-label">Civilité</label>
                         <div class="col-10">
@@ -121,28 +122,28 @@
                     <div class="form-group row mb-3">
                         <label for="firstName" class="col-sm-2 col-form-label">Prénom</label>
                         <div class="col-sm-10">
-                            <input type="text" id="firstName" class="form-control" name="firstName" placeholder="Pierre" required>
+                            <input type="text" pattern="^[A-Z][-a-zA-Z]+$" id="firstName" class="form-control" name="firstName" placeholder="Pierre" required>
                         </div>
                     </div>
 
                     <div class="form-group row mb-3">
                         <label for="lastName" class="col-sm-2 col-form-label">Nom</label>
                         <div class="col-sm-10">
-                            <input type="text" id="lastName" class="form-control" name="lastName" placeholder="DUPONT" required>
+                            <input type="text" pattern="^[A-Z][-a-zA-Z]+$" id="lastName" class="form-control" name="lastName" placeholder="DUPONT" required>
                         </div>
                     </div>
 
                     <div class="form-group row mb-3">
                         <label for="address" class="col-sm-2 col-form-label">Adresse</label>
                         <div class="col-sm-10">
-                            <input type="text" id="address" class="form-control" name="address" placeholder="15 impasse des Lilas" required>
+                            <input type="text" pattern="([0-9]*) ? ([a-zA-Z,\. ]*)" id="address" class="form-control" name="address" placeholder="15 impasse des Lilas" required>
                         </div>
                     </div>
 
                     <div class="form-group row mb-3">
                         <label for="city" class="col-sm-2 col-form-label">Ville</label>
                         <div class="col-sm-10">
-                            <input type="text" id="city" class="form-control" name="city" placeholder="PARIS" required>
+                            <input type="text" pattern="^[A-Z][-a-zA-Z]{1,30}$" id="city" class="form-control" name="city" placeholder="PARIS" required>
                         </div>
                     </div>
 
@@ -155,11 +156,7 @@
 
                     <div class="form-group row">
                         <div class="col-10 col-sm-9 col-md-6 mt-3">
-                            <!-- Pour avoir accès au formulaire de confirmation de commande pendant la phase de développement -->
-                            <a class="btn btn-warning text-center" href="order.html" role="button">Valider la commande (a role=button)</a>
-
-                            <!-- Pour avoir accès aux fonctionnalités de validation des champs de formulaires lorsque le développement sera terminé -->
-                            <button type="submit" class="btn btn-warning text-center">Valider la commande (btn submit)</button>
+                            <button type="submit" class="btn btn-warning text-center btn__submit">Valider la commande</button>
                         </div>
                     </div>
                 </form>

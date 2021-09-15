@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Required meta tags -->
@@ -28,7 +28,6 @@
 <body>
     <header class="container-fluid">   
         <div class="row">
-            <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
             <!-- Navbar -->
             <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
                 <a class="navbar-brand" href="index.html">
@@ -44,7 +43,7 @@
                             <a class="nav-link text-dark" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="basket.html">Panier</a>
+                            <a class="nav-link text-dark" href="basket.html">Panier <span class="badge bg-danger rounded-circle">0</span></a>
                         </li>
                     </ul>
                 </div>
@@ -53,26 +52,35 @@
     </header>
 
     <main class="container">
+        <!-- Alert message : can be hidden by the user-->
+        <!-- Display : 1500 ms -->
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-center mt-4 mb-3">Personnalisation du produit</h1>
+            <div id="alertAddToBasket" class="col-12 col-md-6 mx-auto mt-3 mb-2 d-none">
+                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img" aria-label="Success">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    </svg>
+                    <span class="fw-bold">Article ajouté au panier</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
             </div>
-            <!-- Teddy card -->
-            <div class="col-12 col-md-6 mx-auto"> <!-- Responsive -->
+        </div>
+        <div id="product" class="row">
+            <h1 class="text-center mt-4 mb-3">Personnalisation du produit</h1>
+            
+            <!-- Teddy's card model-->
+            <div id="cardModel" class="col-12 col-md-6 mx-auto d-none"> 
                 <div class="card my-3 border-secondary border-1 rounded-3">
-                    <img class="card-img-top" src="path/image/retournee/par/API/Fetch" alt="Teddy bear" />
+                    <img class="card-img-top card__image" src="" alt="Teddy bear" />
                     <div class="card-body">
-                        [Teddy card content]
-                        <h2 class="card-title">Nom du nounours</h2>
-                        <p class="card-text">Prix du nounours</p>
+                        <h2 class="card-title cardBody__title"></h2>
+                        <p class="card-text text-muted cardBody__price"></p>
                         <form method="post" action="#">
                             <div class="form-group row mb-3">
                                 <label for="colorSelect" class="col-sm-8 col-form-label">Choisissez la couleur de votre ourson : </label>
                                 <div class="col-sm-4">
                                     <select id="colorSelect" class="form-select" name="color">
-                                        <option value="color1" selected>Color 1</option>
-                                        <option value="color2">Color 2</option>
-                                        <option value="color3">Color 3</option>
+                                        <!-- Dynamically generated options -->
                                     </select>
                                 </div>
                             </div>
@@ -80,7 +88,7 @@
                                 <label for="quantity" class="col-sm-8 col-form-label">Quantité : </label>
                                 <div class="col-sm-4">
                                     <select id="quantity" class="form-select" name="quantity">
-                                        <option value="1" selected>1</option>
+                                        <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -94,24 +102,11 @@
                                 </div>
                             </div>
                         </form>
-                        
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 col-md-6 mx-auto mt-5 mb-2" href="basket.html" role="button">Ajouter au panier</a>
+                    </div>    
+                    <div class="card-footer text-center">  
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 col-md-6 mx-auto mt-5 mb-2 card__add" href="basket.html" role="button">Ajouter au panier</a>
                     </div>
                 </div> 
-            </div>
-        </div>
-
-        <!-- Alert message : can be hidden by the user-->
-        <!-- Display : 3 seconds -->
-        <div class="row">
-            <div class=" col-12 col-md-6 mx-auto mt-3 mb-3">
-                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img" aria-label="Success">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                    </svg>
-                    <span class="fw-bold">Article ajouté au panier</span>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
             </div>
         </div>
     </main>
@@ -139,7 +134,8 @@
 
     <!-- Scripts JavaScript -->
     <script src="./functions.js"></script>
-    <script src="./product.js"></script>
+    <script src="./product.js"></script>    
+    
 
 </body>
 

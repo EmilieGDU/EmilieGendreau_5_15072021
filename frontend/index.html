@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Required meta tags -->
@@ -43,7 +43,7 @@
                             <a class="nav-link text-dark" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="basket.html">Panier</a>
+                            <a class="nav-link text-dark" href="basket.html">Panier <span class="badge bg-danger rounded-circle">0</span></a>
                         </li>
                     </ul>
                 </div>
@@ -64,9 +64,9 @@
 
         <h2 class="text-center my-3">Nos oursons</h2>
         
-        <div id="catalog" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"> <!-- Responsive -->
-
-            <!-- Teddy's card model -->
+        <div id="catalog" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Teddy's card model - Display : none -->
+            <!-- The products cards will be generated dynamically -->
             <div id="cardModel" class="col d-none"> 
                 <div class="card h-100 m-2 border-secondary border-1 rounded-3 shadow"> 
                     <img class="card-img-top card__image" src="" alt="Teddy bear" />
@@ -76,11 +76,10 @@
                         <p class="card-text cardBody__description"></p>
                     </div>
                     <div class="card-footer text-center">                
-                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-3 stretched-link card__link" role="button">Personnaliser maintenant</a>
+                        <a class="btn btn-warning text-center d-block col-10 col-sm-9 mx-auto my-3 stretched-link card__link" href="" role="button">Personnaliser maintenant</a>
                     </div>
                 </div> 
             </div>
-
         </div>
     </main>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Required meta tags -->
@@ -28,7 +28,6 @@
 <body>
     <header class="container-fluid">   
         <div class="row">
-            <!-- <div class="col"></div> Logo? A conserver si écart non gérable entre icône et menu de navigation -->
             <!-- Navbar -->
             <nav class="col navbar navbar-expand-sm bg-logo navbar-light"> 
                 <a class="navbar-brand" href="index.html">
@@ -44,7 +43,7 @@
                             <a class="nav-link text-dark" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="basket.html">Panier</a>
+                            <a class="nav-link text-dark" href="basket.html">Panier <span class="badge bg-danger rounded-circle">0</span></a>
                         </li>
                     </ul>
                 </div>
@@ -66,18 +65,18 @@
         </div>
         
         <div class="row">
-            <!-- GENERATION DYNAMIQUE -->
-            <p class="col-12 text-center">
-                <span id="civility">#Madame/Mademoiselle/Monsieur#</span> <span id="first_name">#Prénom#</span> <span id="last_name">#NOM#</span>, <br/>
-                Votre commande numéro <span id="order_id">#Numéro de commande#</span> est confirmée, pour un montant total de <span id="total_amount">#X,XX €#</span>. <br/>
-                Dans quelques minutes, vous recevrez un récapitulatif à l'adresse courriel suivante : <span id="email">#Adresse @#</span>. <br/>
-                Toute l'équipe d'Orinoco vous remercie pour votre achat. <br/>
+            <!-- Dynamically generated order confirmation -->
+            <p class="col-12 text-center">                
+                <span id="first_name">#Prénom#</span> <span id="last_name">#NOM#</span>,<br/><br/>
+                Votre commande numéro <strong><span id="order_id">#Numéro de commande#</span></strong> est confirmée, pour un montant total de <em><span id="total_amount">#X,XX#</span></em>. <br/><br/>
+                Dans quelques minutes, vous recevrez un récapitulatif à l'adresse courriel suivante : <em><span id="email">#Adresse @#</span></em>. <br/><br/>
+                Toute l'équipe d'Orinoco vous remercie pour votre achat. <br/><br/>
                 A très bientôt sur l'une de nos boutiques en ligne !
             </p>
         </div>
 
         <div class="row">
-            <a class="btn btn-warning text-center col-2 mx-auto mt-4" href="index.html" role="button">Retour à l'accueil</a>
+            <a class="btn btn-warning text-center col-10 col-sm-9 mx-auto mt-4 btn__clear" href="index.html" role="button">Retour à l'accueil</a>
         </div>
     </main>
 
