@@ -8,7 +8,8 @@ Le fondateur de l'entreprise souhaite créer un premier **MVP** pour démontrer 
 
 ### Mission ###
 Chargée de la partie **front-end** du site, ma mission consiste à développer en utilisant les technologies **HTML**, **CSS** et **JavaScript**.  
-Il me faut également planifier une suite de **tests unitaires**, pour couvrir au minimum 80% de la base de code, sans obligation d'écrire ces tests.
+Il me faut également planifier une suite de **tests unitaires**, pour couvrir au minimum 80% de la base de code, sans obligation d'écrire ces tests.  
+Pour ce projet, j'ai choisi de recourir à **Bootstrap 5** pour me familiariser avec son utilisation.
 
 ### Compétences évaluées ###
 - Gérer des événements JavaScript
